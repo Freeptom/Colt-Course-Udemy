@@ -1,4 +1,14 @@
-body {
+#content {
+  text-align: center;
+}
+
+
+
+
+
+
+
+/*body {
   padding-top: 70px;
 }
 
@@ -17,4 +27,4 @@ body {
 
 .navbar-inverse .navbar-brand {
   color:white;
-}
+}*/
