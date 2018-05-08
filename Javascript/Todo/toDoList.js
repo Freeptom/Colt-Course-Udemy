@@ -6,13 +6,14 @@ var input = prompt("What would you like to do?");
 while(input !== "quit") {
   //handle input
   if(input === "list") {
-    console.log(todos);
+      console.log(todos);
   } else if (input === "new") {
     //ask for new
     var newTodo = prompt("Enter New ToDo");
     //add to array
     todos.push(newTodo);
   }
+
 //ask again for input
   input = prompt("What would you like to do?");
 }
