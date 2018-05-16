@@ -1,0 +1,23 @@
+{
+  "name": "colt",
+  "version": "1.0.0",
+  "description": "eslint package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Freeptom/Colt-Course-Udemy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Freeptom/Colt-Course-Udemy/issues"
+  },
+  "homepage": "https://github.com/Freeptom/Colt-Course-Udemy#readme",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-plugin-react": "^7.8.2"
+  }
+}
