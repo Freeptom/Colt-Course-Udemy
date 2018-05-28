@@ -31,7 +31,7 @@ function setupModeButtons() {
   }
 }
 
-function setupSquares() {  
+function setupSquares() {
   for (var i = 0; i < squares.length; i++) {
     // add click listeners to squares
     squares[i].addEventListener('click', function() {
