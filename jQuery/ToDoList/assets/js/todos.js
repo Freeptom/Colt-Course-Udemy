@@ -1,5 +1,5 @@
 
-// cross out item. Used 'on' method on the ul (which was already created). Click method, would not work as new lis created after page load would not be deleted. 'li' here is what's being targeted for 'this' selector. 
+// cross out item. Used 'on' method on the ul (which was already created). Click method, would not work as new lis created after page load would not be deleted. 'li' here is what's being targeted for 'this' selector.
 $('ul').on('click', 'li', function(){
   $(this).toggleClass('completed');
 });
@@ -18,6 +18,6 @@ $('input[type="text"]').keypress(function(e){
     var todoText = $(this).val();
     $(this).val('');
     // create new li and add to ul
-    $('ul').append('<li><span>X</span> ' + todoText + '</li>')
+    $('ul').append('<li><span><i class="far fa-trash-alt"></i></span> ' + todoText + '</li>')
   }
 });
