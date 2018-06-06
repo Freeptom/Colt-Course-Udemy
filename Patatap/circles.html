@@ -173,36 +173,73 @@
   var circles = [];
 
   function onKeyDown(event) {
-    if(keyData[event.key]){
-      //defining max w and h of screen
-      var maxPoint = new Point(view.size.width, view.size.height);
-      //create new random point
-      var randomPoint = Point.random();
-      // make point on screen
-      var point = maxPoint * randomPoint;
-      // create new circle with point
-      var newCircle = new Path.Circle(point, 500);
-      // select keyData key
-      newCircle.fillColor = keyData[event.key].color;
-      keyData[event.key].sound.play();
-      //push new circle to circles array
-      circles.push(newCircle);
+    var key = keyData[event.key];
+  
+    if (key) {
+      if (!key.active) {
+        //defining max w and h of screen
+        var maxPoint = new Point(view.size.width, view.size.height);
+        //create new random point
+        var randomPoint = Point.random();
+        // make point on screen
+        var point = maxPoint * randomPoint;
+        // create new circle with point
+        var newCircle = new Path.Circle(point, 500);
+        // select keyData key
+        newCircle.fillColor = key.color;
+        key.sound.play();
+        //push new circle to circles array
+        circles.push(newCircle);
+        key.active = true;
+      }
+    }
+  }
+
+  function onKeyUp(event) {
+    var key = keyData[event.key];
+
+    if (key) {
+      key.active = false;
     }
   }
 
   // each frame, scale each circle
   function onFrame(event){
-  for(var i = 0; i < circles.length; i++){
-    circles[i].scale(0.9);
-    circles[i].fillColor.hue += 1;
-    if(circles[i].area < 1){
-      circles[i].remove(); // remove the circle from the canvas
-      circles.splice(i, 1); // remove the circle from the array
-      i--; // decrement i so that the loop doesn't skip a circle because of .splice()
-      console.log(circles);
+
+
+    if (!(event.count % 20)) {
+      Object.keys(keyData).map(function(keyName) {
+        var key = keyData[keyName]
+
+        if (key.active) {
+          //defining max w and h of screen
+          var maxPoint = new Point(view.size.width, view.size.height);
+          //create new random point
+          var randomPoint = Point.random();
+          // make point on screen
+          var point = maxPoint * randomPoint;
+          // create new circle with point
+          var newCircle = new Path.Circle(point, 500);
+          // select keyData key
+          newCircle.fillColor = key.color;
+          key.sound.play();
+          //push new circle to circles array
+          circles.push(newCircle);
+        }
+      })
+    }
+
+    for (var i = 0; i < circles.length; i++) {
+      circles[i].scale(0.9);
+      circles[i].fillColor.hue += 1;
+      if(circles[i].area < 1){
+        circles[i].remove(); // remove the circle from the canvas
+        circles.splice(i, 1); // remove the circle from the array
+        i--; // decrement i so that the loop doesn't skip a circle because of .splice()
+        console.log(circles);
+      }
     }
   }
-}
 
 </script>
 
