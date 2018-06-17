@@ -27,6 +27,7 @@
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "faker": "^4.1.0",
-    "knock-knock-jokes": "^1.7.0"
+    "knock-knock-jokes": "^1.7.0",
+    "request": "^2.87.0"
   }
 }
