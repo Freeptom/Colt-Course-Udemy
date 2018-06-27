@@ -8,9 +8,9 @@ app.set('view engine', 'ejs');
 
 
 var campgrounds = [
-    {name: "Salmon Creek", image: 'https://pixabay.com/get/e83db7082af3043ed1584d05fb1d4e97e07ee3d21cac104496f0c179a0e4b1bf_340.jpg'},
+    {name: "Salmon Creek", image: 'https://cdn.pixabay.com/photo/2016/02/18/22/16/tent-1208201_960_720.jpg'},
     {name: "Granite Hill", image: 'https://farm2.staticflickr.com/1424/1430198323_c26451b047.jpg'},
-    {name: "Mountain Goat's Rest", image: 'https://pixabay.com/get/e83db50929f0033ed1584d05fb1d4e97e07ee3d21cac104496f0c179a0e4b1bf_340.jpg'}
+    {name: "Mountain Goat's Rest", image: 'https://cdn.pixabay.com/photo/2016/11/21/16/03/campfire-1846142_960_720.jpg'}
 ]
 
 
