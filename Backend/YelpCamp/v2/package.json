@@ -4,7 +4,9 @@
   "description": "YelpCamp v1",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "mongo": "sudo mongod --dbpath=/Users/Tom/Dropbox/Websites/Colt-Course-Udemy/Backend/YelpCamp/data/db",
+    "start": "node app.js"
   },
   "author": "Tom Pearson",
   "license": "ISC",
